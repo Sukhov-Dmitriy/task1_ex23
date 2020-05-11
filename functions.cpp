@@ -12,7 +12,7 @@ CRat *CreateData(ifstream &input, CRatFactory** f){
     rat = f[I]->create_dat(d);
     for(int j = 0; j < d*2; j++){
         input >> rat->data[j];
-        if(j%2 == 0 && rat->data[j]== 0){
+        if(j%2 == 1 && rat->data[j]== 0){
             cout <<"Warning! You try to divide by zero!";
         }
     }
